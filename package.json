@@ -1,0 +1,23 @@
+{
+  "name": "webpack-remark-plugin",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orangemug/webpack-remark-plugin.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/orangemug/webpack-remark-plugin/issues"
+  },
+  "homepage": "https://github.com/orangemug/webpack-remark-plugin#readme",
+  "peerDependencies": {
+    "remark": "^7.0.1"
+  },
+  "dependencies": {
+    "loader-utils": "^1.1.0"
+  }
+}
