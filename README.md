@@ -35,7 +35,7 @@ npm install remark remark-html --save-dev
 
 Then add the following to your webpack config
 
-```
+```js
 module.exports = {
   module: {
     rules: [
@@ -68,35 +68,37 @@ module.exports = {
 To load markdown as react, first off install
 
 ```
-npm i remark remark-react --save-dev
+npm install remark remark-react --save-dev
 ```
 
 Then add the following to your webpack config
 
-```
-module: {
-  rules: [
-    {
-      test: /\.md$/,
-      use: [
-        {
-          loader: "webpack-react-node-plugin",
-          options: {
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: "webpack-react-node-plugin",
+            options: {
+            }
+          },
+          {
+            loader: "webpack-remark-plugin",
+            options: {
+              use: [
+                {
+                  module: require("remark-react")
+                }
+              ]
+            }
           }
-        },
-        {
-          loader: "webpack-remark-plugin",
-          options: {
-            use: [
-              {
-                module: require("remark-react")
-              }
-            ]
-          }
-        }
-      ]
-    }
-  ]
+        ]
+      }
+    ]
+  }
 }
 ```
 
