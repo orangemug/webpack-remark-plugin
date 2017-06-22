@@ -68,7 +68,7 @@ module.exports = {
 To load markdown as react, first off install
 
 ```
-npm install remark remark-react --save-dev
+npm install remark remark-react orangemug/webpack-react-inflate-plugin --save-dev
 ```
 
 Then add the following to your webpack config
@@ -81,7 +81,7 @@ module.exports = {
         test: /\.md$/,
         use: [
           {
-            loader: "webpack-react-node-plugin",
+            loader: "webpack-react-inflate-plugin",
             options: {
             }
           },
