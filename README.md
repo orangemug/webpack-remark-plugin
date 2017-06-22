@@ -75,28 +75,28 @@ Then add the following to your webpack config
 
 ```
 module: {
-	rules: [
-		{
-			test: /\.md$/,
-			use: [
-				{
-					loader: "webpack-react-node-plugin",
-					options: {
-					}
-				},
-				{
-					loader: "webpack-remark-plugin",
-					options: {
+  rules: [
+    {
+      test: /\.md$/,
+      use: [
+        {
+          loader: "webpack-react-node-plugin",
+          options: {
+          }
+        },
+        {
+          loader: "webpack-remark-plugin",
+          options: {
             use: [
               {
                 module: require("remark-react")
               }
             ]
-					}
-				}
-			]
-		}
-	]
+          }
+        }
+      ]
+    }
+  ]
 }
 ```
 
